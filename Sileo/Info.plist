@@ -567,7 +567,7 @@
 			<string>$(PRODUCT_NAME)</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>sileo</string>
+				<string>sssss</string>
 			</array>
 		</dict>
 	</array>
@@ -575,7 +575,7 @@
 	<string>1</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-		<string>filza</string>
+		<string>fffff</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
