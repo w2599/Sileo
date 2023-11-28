@@ -20,19 +20,6 @@ enum Bootstrap: String, Codable {
     
     init(jailbreak: Jailbreak) {
         switch jailbreak {
-        case .electra: self = .electra
-        case .chimera:
-            if URL(fileURLWithPath: "/.procursus_strapped").exists {
-                self = .procursus
-            } else {
-                self = .electra
-            }
-        case .unc0ver11:
-            self = .unc0ver
-        case .unc0ver12, .unc0ver13, .unc0ver14, .checkra1n12, .checkra1n13, .checkra1n14:
-            self = .elucubratus
-        case .xina15:
-            self = .xina
         default:
             self = .procursus
         }
