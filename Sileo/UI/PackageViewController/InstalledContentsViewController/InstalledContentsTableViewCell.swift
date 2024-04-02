@@ -56,10 +56,10 @@ class InstalledContentsTableViewCell: UITableViewCell {
     
     @objc public func openInFilza(_ sender: UIMenuController?) {
         guard let node = node else { return }
-        let url = URL(string: "fffff://view\(node.path.addingPercentEncoding(with: .utf8))")!
-	if UIApplication.shared.canOpenURL(url) {
-		UIApplication.shared.open(url)
-	}
+        let url = URL(string: "fffff://view\(node.path.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)!)")!
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
+        }
     }
     
     @objc public func copyPath(_ sender: UIMenuController?) {
