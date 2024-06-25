@@ -12,7 +12,7 @@ import SafariServices
 class URLManager {
     
     static func url(package: String) -> String {
-        "sileo://package/" + package
+        "sssss://package/" + package
     }
     
     static func urlRequest(_ url: URL, includingDeviceInfo: Bool = true) -> URLRequest {
@@ -50,7 +50,7 @@ class URLManager {
             let viewController = SFSafariViewController(url: url)
             viewController.preferredControlTintColor = UINavigationBar.appearance().tintColor
             return viewController
-        } else if url.scheme == "sileo" {
+        } else if url.scheme == "sssss" {
             if url.host == "package" && url.pathComponents.count >= 2 {
                 if let package = PackageListManager.shared.newestPackage(identifier: url.pathComponents[1], repoContext: nil) {
                     let packageVC = NativePackageViewController.viewController(for: package)

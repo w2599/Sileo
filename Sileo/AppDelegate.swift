@@ -256,7 +256,7 @@ class SileoAppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDe
             }
         }
         
-        if url.host == "source" && url.scheme == "sileo" {
+        if url.host == "source" && url.scheme == "sssss" {
             guard let tabBarController = self.window?.rootViewController as? UITabBarController,
                 let sourcesSVC = tabBarController.viewControllers?[2] as? UISplitViewController,
                 let sourcesNavNV = sourcesSVC.viewControllers[0] as? SileoNavigationController,

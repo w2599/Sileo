@@ -72,7 +72,7 @@ class PaymentAuthenticator: NSObject, ASWebAuthenticationPresentationContextProv
         }
         
         if #available(iOS 12, macCatalyst 12, *) {
-            let currentSession = ASWebAuthenticationSession(url: provider.authenticationURL, callbackURLScheme: "sileo", completionHandler: callback)
+            let currentSession = ASWebAuthenticationSession(url: provider.authenticationURL, callbackURLScheme: "sssss", completionHandler: callback)
             if #available(iOS 13, *) {
                 currentSession.presentationContextProvider = self
                 
@@ -80,7 +80,7 @@ class PaymentAuthenticator: NSObject, ASWebAuthenticationPresentationContextProv
             currentSession.start()
             currentAuthenticationSession = currentSession
         } else {
-            let currentSession = SFAuthenticationSession(url: provider.authenticationURL, callbackURLScheme: "sileo", completionHandler: callback)
+            let currentSession = SFAuthenticationSession(url: provider.authenticationURL, callbackURLScheme: "sssss", completionHandler: callback)
             currentSession.start()
             currentAuthenticationSession = currentSession
         }
@@ -120,14 +120,14 @@ class PaymentAuthenticator: NSObject, ASWebAuthenticationPresentationContextProv
             completion?(nil, false)
         }
         if #available(iOS 12, macCatalyst 12, *) {
-            let currentSession = ASWebAuthenticationSession(url: url, callbackURLScheme: "sileo", completionHandler: callback)
+            let currentSession = ASWebAuthenticationSession(url: url, callbackURLScheme: "sssss", completionHandler: callback)
             if #available(iOS 13, *) {
                 currentSession.presentationContextProvider = self
             }
             currentSession.start()
             currentAuthenticationSession = currentSession
         } else {
-            let currentSession = SFAuthenticationSession(url: url, callbackURLScheme: "sileo", completionHandler: callback)
+            let currentSession = SFAuthenticationSession(url: url, callbackURLScheme: "sssss", completionHandler: callback)
             currentSession.start()
             currentAuthenticationSession = currentSession
         }

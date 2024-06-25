@@ -458,7 +458,7 @@ final class SourcesViewController: SileoViewController {
         alert.addTextField { textField in
             textField.placeholder = "URL"
             if let urlString = url?.absoluteString {
-                let parsedURL = urlString.replacingOccurrences(of: "sileo://source/", with: "")
+                let parsedURL = urlString.replacingOccurrences(of: "sssss://source/", with: "")
                 textField.text = parsedURL
             } else {
                 textField.text = "https://"
