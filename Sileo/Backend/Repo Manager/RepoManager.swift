@@ -68,12 +68,20 @@ final class RepoManager {
         fixLists()
         let directory = URL(fileURLWithPath: CommandPath.sourcesListD)
         let alternative = URL(fileURLWithPath: CommandPath.alternativeSources)
+        var defaultSourceFile: URL? = nil
         for item in (directory.implicitContents + alternative.implicitContents)  {
+            if item.lastPathComponent == "default.sources" {
+                defaultSourceFile = item
+                continue
+            }
             if item.pathExtension == "list" {
                 parseListFile(at: item)
             } else if item.pathExtension == "sources" {
                 parseSourcesFile(at: item)
             }
+        }
+        if let defaultSourceFile = defaultSourceFile {
+            parseSourcesFile(at: defaultSourceFile)
         }
         #endif
         if !UserDefaults.standard.bool(forKey: "Sileo.DefaultRepo") {
