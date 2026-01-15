@@ -930,7 +930,7 @@ final class DownloadManager {
                             if installedPatcher {
                                 self.downloadDeb(package:package, msg: String(localizationKey: "Downloading_Package_Status"), handler: self.patchPackage)
                             }
-                            else if let packageview = URLManager.viewController(url: URL(string: "sileo://package/com.roothide.patcher"), isExternalOpen: true, presentModally: &presentModally) {
+                            else if let packageview = URLManager.viewController(url: URL(string: "sssss://package/com.roothide.patcher"), isExternalOpen: true, presentModally: &presentModally) {
                                 
                                 SileoAppDelegate.presentController(packageview)
                             }
