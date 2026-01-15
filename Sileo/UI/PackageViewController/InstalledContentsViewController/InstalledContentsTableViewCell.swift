@@ -56,9 +56,21 @@ class InstalledContentsTableViewCell: UITableViewCell {
     
     @objc public func openInFilza(_ sender: UIMenuController?) {
         guard let node = node else { return }
-        let path = jbroot(node.path).addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!
-        let url = URL(string: "filza://view/\(path)")!
-        UIApplication.shared.open(url)
+        let path = jbroot(node.path).addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        if let filzaURL = URL(string: "filza://view/\(path)") {
+            UIApplication.shared.open(filzaURL, options: [:]) { success in
+                if success {
+                    return
+                }
+                if let fallbackURL = URL(string: "fffff://view/\(path)") {
+                    UIApplication.shared.open(fallbackURL, options: [:], completionHandler: nil)
+                }
+            }
+            return
+        }
+        if let fallbackURL = URL(string: "fffff://view/\(path)") {
+            UIApplication.shared.open(fallbackURL, options: [:], completionHandler: nil)
+        }
     }
     
     @objc public func copyPath(_ sender: UIMenuController?) {
