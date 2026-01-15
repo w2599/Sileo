@@ -4911,7 +4911,7 @@
 				MARKETING_VERSION = 2.5;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = org.coolstar.SileoStore;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.zqbb.SStore;
 				PRODUCT_MODULE_NAME = Sileo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -4964,7 +4964,7 @@
 				MARKETING_VERSION = 2.5;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = org.coolstar.SileoStore;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.zqbb.SStore;
 				PRODUCT_MODULE_NAME = Sileo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
