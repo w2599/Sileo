@@ -52,13 +52,8 @@ class InstalledContentsViewController: UIViewController {
         treeView.expand(node: rootNode, inSection: 0)
         
         let copyPath = UIMenuItem(title: String(localizationKey: "Copy_Path"), action: #selector(InstalledContentsTableViewCell.copyPath(_:)))
-        let url = URL(string: "filza://")!
-        if UIApplication.shared.canOpenURL(url) {
-            let openInFilza = UIMenuItem(title: String(localizationKey: "Open_In_Filza"), action: #selector(InstalledContentsTableViewCell.openInFilza(_:)))
-            UIMenuController.shared.menuItems = [copyPath, openInFilza]
-        } else {
-            UIMenuController.shared.menuItems = [copyPath]
-        }
+        let openInFilza = UIMenuItem(title: String(localizationKey: "Open_In_Filza"), action: #selector(InstalledContentsTableViewCell.openInFilza(_:)))
+        UIMenuController.shared.menuItems = [copyPath, openInFilza]
         
     }
 
