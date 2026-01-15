@@ -134,7 +134,7 @@ export EXPANDED_CODE_SIGN_IDENTITY_NAME =
 STRIP = xcrun strip
 
 ifneq ($(MAC), 1)
-export PRODUCT_BUNDLE_IDENTIFIER = "org.coolstar.SileoStore"
+export PRODUCT_BUNDLE_IDENTIFIER = "cn.zqbb.SStore"
 SILEO_ID   = org.coolstar.sileo
 else
 export PRODUCT_BUNDLE_IDENTIFIER = "sileo"
