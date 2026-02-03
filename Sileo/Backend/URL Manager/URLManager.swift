@@ -76,7 +76,9 @@ class URLManager {
                     viewController.preferredControlTintColor = UINavigationBar.appearance().tintColor
                     return viewController
                 }
-            } else if url.host == nil {
+            }else if url.host == "source" {
+                return nil
+            }else if url.host == nil {
                 return nil
             }
         }
